@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Test
+        run: uv run --no-project --python 3.12 --with pytest --with numpy --with imageio-ffmpeg --with sherpa-onnx --with certifi pytest tests -v

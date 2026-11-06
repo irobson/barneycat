@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="#2A2D86"/>
+  <ellipse cx="470" cy="866" rx="180" ry="18" fill="#14154A"/>
+
+  <!-- tail -->
+  <path d="M520 846 C640 860 722 800 722 690 C722 610 668 560 672 500 C675 452 700 436 722 450"
+        fill="none" stroke="#FBC92E" stroke-width="36" stroke-linecap="round"/>
+  <!-- body -->
+  <path d="M396 420 C372 520 338 610 338 730 C338 790 342 862 372 862 L520 862 C552 862 556 790 556 730 C556 610 516 520 492 420 Z" fill="#FBC92E"/>
+  <!-- stripes -->
+  <path d="M352 640 C378 636 396 644 408 656 M346 700 C372 696 390 704 402 716 M544 640 C518 636 500 644 488 656 M550 700 C524 696 506 704 494 716"
+        fill="none" stroke="#D9960F" stroke-width="13" stroke-linecap="round"/>
+  <!-- legs -->
+  <path d="M418 680 L414 852 M476 680 L480 852" fill="none" stroke="#D9960F" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- ears -->
+  <path d="M344 330 L330 160 L436 262 Z" fill="#FBC92E"/>
+  <path d="M544 330 L560 160 L454 262 Z" fill="#FBC92E"/>
+  <path d="M356 290 L346 196 L408 262 Z" fill="#F29A7A"/>
+  <path d="M532 290 L544 196 L482 262 Z" fill="#F29A7A"/>
+  <!-- head -->
+  <ellipse cx="444" cy="338" rx="122" ry="106" fill="#FBC92E"/>
+  <!-- forehead stripes -->
+  <path d="M444 238 L444 280 M410 244 L416 276 M478 244 L472 276" fill="none" stroke="#D9960F" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <path d="M362 330 C378 302 418 302 430 330 C418 360 378 360 362 330 Z" fill="#3FD45E"/>
+  <path d="M458 330 C470 302 510 302 526 330 C510 360 470 360 458 330 Z" fill="#3FD45E"/>
+  <ellipse cx="396" cy="330" rx="7" ry="26" fill="#10131F"/>
+  <ellipse cx="492" cy="330" rx="7" ry="26" fill="#10131F"/>
+  <circle cx="408" cy="318" r="5" fill="#FFFFFF"/>
+  <circle cx="504" cy="318" r="5" fill="#FFFFFF"/>
+  <!-- nose and whiskers -->
+  <path d="M434 372 L454 372 L444 384 Z" fill="#C9674B"/>
+  <path d="M398 386 L290 372 M398 398 L294 408 M490 386 L598 372 M490 398 L594 408" fill="none" stroke="#FFF3C4" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- headphones: he is here to listen -->
+  <path d="M322 330 C322 150 566 150 566 330" fill="none" stroke="#10131F" stroke-width="20" stroke-linecap="round"/>
+  <rect x="294" y="292" width="50" height="104" rx="24" fill="#10131F"/>
+  <rect x="544" y="292" width="50" height="104" rx="24" fill="#10131F"/>
+  <circle cx="319" cy="344" r="10" fill="#3FD45E"/>
+  <circle cx="569" cy="344" r="10" fill="#3FD45E"/>
+</svg>

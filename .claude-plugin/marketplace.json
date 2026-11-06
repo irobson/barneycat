@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "barneycat",
+  "description": "Meeting recordings turned into reports with action items.",
+  "owner": { "name": "irobson", "url": "https://github.com/irobson" },
+  "plugins": [
+    {
+      "name": "barneycat",
+      "description": "Reads a meeting recording and delivers a report of what was discussed and what needs to be done.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

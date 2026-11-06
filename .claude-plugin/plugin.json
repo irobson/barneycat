@@ -1,0 +1,9 @@
+{
+  "name": "barneycat",
+  "version": "0.1.0",
+  "description": "Reads a meeting recording and delivers a report of what was discussed and what needs to be done. Transcribes locally.",
+  "author": { "name": "irobson", "url": "https://github.com/irobson" },
+  "repository": "https://github.com/irobson/barneycat",
+  "license": "MIT",
+  "keywords": ["meetings", "transcription", "minutes", "action-items"]
+}
