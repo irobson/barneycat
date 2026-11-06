@@ -30,6 +30,8 @@ Flags:
 - `--out <folder>`: output folder, by default `<recording>.barneycat` next to the file.
 - `--no-frames`, `--no-diarize`, `--force`.
 
+If `${CLAUDE_PLUGIN_ROOT}` is not resolved in your shell, use the path two folders above this skill's base directory.
+
 The command prints a JSON summary and resumes from cache if interrupted. Report anything under `warnings`.
 
 ## 2. Read
