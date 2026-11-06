@@ -30,8 +30,6 @@ Flags:
 - `--out <folder>`: output folder, by default `<recording>.barneycat` next to the file.
 - `--no-frames`, `--no-diarize`, `--force`.
 
-If `${CLAUDE_PLUGIN_ROOT}` is not resolved in your shell, use the path two folders above this skill's base directory.
-
 The command prints a JSON summary and resumes from cache if interrupted. Report anything under `warnings`.
 
 ## 2. Read
@@ -54,7 +52,7 @@ Write `report.md` and `actions.json` in the output folder, following [report-tem
 
 **Evidence is mandatory.** Every action and every important claim carries a stamp and a quote. Mark anything without a direct source as inference. Never invent a timestamp, a name or a deadline. If something is unclear, write that it is unclear.
 
-`user.name` in the summary says who "you" is. Without it, write the "For you" section in general terms.
+`user.name` in the summary says who "you" is, and `user.notes` says what the user wants you to know: their role, how they show up on a call, what they care about. Use both to identify them in the frames and to pick what goes under "For you". Without a name, write that section in general terms.
 
 If `reports_dir` is set, copy `report.md` and `actions.json` there as `<date>-<short-topic>.md` and `<date>-<short-topic>.json`.
 

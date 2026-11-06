@@ -1,6 +1,7 @@
 """End to end on a generated video, with no speech in it and a path with spaces."""
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -10,8 +11,8 @@ import media
 SCRIPT = Path(__file__).resolve().parent.parent / "scripts" / "barneycat.py"
 
 
-def run(*args):
-    return subprocess.run(["uv", "run", str(SCRIPT), *args], check=True, capture_output=True, text=True, encoding="utf-8")
+def run(*args, env=None):
+    return subprocess.run(["uv", "run", str(SCRIPT), *args], check=True, capture_output=True, text=True, encoding="utf-8", env=env)
 
 
 def make_video(path: Path) -> None:
@@ -32,12 +33,18 @@ def test_prepare_and_pdf(tmp_path):
     video = folder / "TedCat 2026-01-15 at 09.09.13.mp4"
     make_video(video)
 
-    summary = json.loads(run("prepare", str(video), "--engine", "whisper-faster", "--model", "tiny", "--language", "en", "--no-diarize").stdout)
+    home = tmp_path / "home"
+    home.mkdir()
+    (home / "config.toml").write_text('name = "Jane Example"\nnotes = "QA on the data team."\n', encoding="utf-8")
+    env = {**os.environ, "BARNEYCAT_HOME": str(home)}
+
+    summary = json.loads(run("prepare", str(video), "--engine", "whisper-faster", "--model", "tiny", "--language", "en", "--no-diarize", env=env).stdout)
 
     output = Path(summary["output"])
     assert output == folder / (video.name + ".barneycat")
     assert summary["started_at"] == "2026-01-15T09:09:13"
     assert summary["frames"] == 2
+    assert summary["user"] == {"name": "Jane Example", "aliases": [], "notes": "QA on the data team."}
     assert (output / "frames" / "00-00-10.jpg").exists() or (output / "frames" / "00-00-05.jpg").exists()
     assert "(frame: frames/00-00-00.jpg)" in (output / "transcript.md").read_text(encoding="utf-8")
     assert not (output / ".cache" / "audio.wav").exists()

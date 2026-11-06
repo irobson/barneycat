@@ -63,6 +63,9 @@ name = "Jane Example"          # who "you" is in the report
 aliases = ["Jane"]
 language = "en"
 reports_dir = "~/meetings"     # turns on memory across meetings
+notes = """
+QA on the data team. My tile on calls has no name on it.
+"""
 ```
 
 A glossary fixes the names and terms your team uses:

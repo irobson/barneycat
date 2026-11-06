@@ -125,6 +125,9 @@ name = "Jane Example"
 aliases = ["Jane"]
 language = "en"
 reports_dir = "~/meetings"
+notes = """
+QA on the data team. My tile on calls has no name on it.
+"""
 ```
 
 ```toml
@@ -135,7 +138,7 @@ vocabulary = ["Acme", "XY-123"]
 "a cme" = "Acme"
 ```
 
-Without `name`, the "For you" section is written in general terms.
+`notes` is free text for the agent: the user's role, how they appear on a call, what they care about. Without `name`, the "For you" section is written in general terms.
 
 ## Privacy
 

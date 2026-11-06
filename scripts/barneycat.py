@@ -140,7 +140,7 @@ def prepare(args: argparse.Namespace) -> dict:
         "glossary": args.glossary,
         "speakers": len({u["speaker"] for u in utterances if u["speaker"]}),
         "frames": len(picked),
-        "user": {"name": settings.get("name"), "aliases": settings.get("aliases", [])},
+        "user": {"name": settings.get("name"), "aliases": settings.get("aliases", []), "notes": settings.get("notes")},
         "reports_dir": settings.get("reports_dir"),
         "warnings": warnings,
     }
